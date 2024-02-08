@@ -213,7 +213,7 @@
                 </div>
                 <?php if ($proposal->estimate_id == null && $proposal->invoice_id == null) { ?>
                 <?php if (staff_can('create',  'estimates') || staff_can('create',  'invoices')) { ?>
-                <!--<div class="btn-group">
+                <div class="btn-group">
                     <button type="button" class="btn btn-success dropdown-toggle<?php if ($proposal->rel_type == 'customer' && total_rows(db_prefix() . 'clients', ['active' => 0, 'userid' => $proposal->rel_id]) > 0) {
                                 echo ' disabled';
                             } ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -253,7 +253,7 @@
                      } ?>><?php echo _l('proposal_convert_invoice'); ?></a></li>
                         <?php } ?>
                     </ul>
-                </div> -->
+                </div>
                 <?php } ?>
                 <?php } else {
                          if ($proposal->estimate_id != null) {
